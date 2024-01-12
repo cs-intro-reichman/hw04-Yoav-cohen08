@@ -1,15 +1,9 @@
 public class StringOps {
     public static void main(String[] args) 
     {
-        /* String str = "HHHH";
-        char ch = 'H';
-        int[] array = allIndexOf(str, ch);
-        for(int i = 0; i < array.length; i++)
-        {
-            System.out.println(array[i]);
-        } */
+        String str = "Hello World";
+        System.out.println(capVowelsLowRest(str));
     }
-
     public static String capVowelsLowRest (String string) 
     {
         String str = "";
@@ -19,11 +13,11 @@ public class StringOps {
             ch = string.charAt(i);
             if((ch >= 65) && (ch <= 90))
             {
-                if(ch!='A' || ch!='E' || ch!='I' || ch!='O' || ch!='U') ch = (char)(ch + 32);
+                if(ch != 'A' && ch != 'E' && ch != 'I' && ch != 'O' && ch!= 'U') ch = (char)(ch + 32);
             }
             else
             {
-                if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u') ch = (char)(ch - 32);
+                if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') ch = (char)(ch - 32);
             }
             str = str + ch;
         }
